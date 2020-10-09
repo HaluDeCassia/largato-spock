@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
-import {lightColor, darkColor } from "./colors";
+import { lightColor, darkColor } from "./colors";
 
 import "font-awesome/css/font-awesome.css";
 
