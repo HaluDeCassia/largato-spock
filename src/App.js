@@ -1,8 +1,9 @@
 import React from 'react';
 
-import { StyledApp, Global } from './styles/global'; 
 import Buttons from './components/Buttons'; 
 import Emoji from './components/Emoji'; 
+
+import { StyledApp, Global } from './styles/global'; 
 
 const OPTIONS = {
   rock: {
@@ -66,18 +67,21 @@ function App() {
     <StyledApp>
       <Global />
       <Buttons playGame={ playGame } />
+
       {playerChoice && (
         <React.Fragment>
           {OPTIONS[playerChoice].emoji}
           {OPTIONS[playerChoice].displayName }
         </React.Fragment>
       )}
+
       {computerChoice && (
         <React.Fragment>
           {OPTIONS[computerChoice].emoji}
           {OPTIONS[computerChoice].displayName }
         </React.Fragment>
       )}
+      
       <p>{ result }</p>
     </StyledApp>
   );
