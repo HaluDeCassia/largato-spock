@@ -4,13 +4,32 @@ import { StyledApp, Global } from './styles/global';
 import Buttons from './components/Buttons'; 
 import Emoji from './components/Emoji'; 
 
-const TYPE_OPTIONS = {
-  rock: ['Pedra', (<Emoji ariaLabel="pedra" emoji="✊"/>)],
-  paper: ['Papel', (<Emoji ariaLabel="papel" emoji="✋"/>)],
-  scissors: ['Tesoura', (<Emoji ariaLabel="tesoura" emoji="✌️"/>)],
-  lizard: ['Lagarto', (<Emoji ariaLabel="lagarto" emoji="🦎"/>)],
-  spock: ['Spock', (<Emoji ariaLabel="spock" emoji="🖖"/>)],
-  default: ['Escolha uma opção para começar', '']
+const OPTIONS = {
+  rock: {
+    displayName: 'Pedra', 
+    emoji: (<Emoji ariaLabel="pedra" emoji="✊"/>),
+    wins: ['lizard', 'scissors']
+  },
+  paper: {
+    displayName: 'Papel', 
+    emoji: (<Emoji ariaLabel="papel" emoji="✋"/>),
+    wins: ['rock', 'spock']
+  },
+  scissors:{
+    displayName: 'Tesoura', 
+    emoji: (<Emoji ariaLabel="tesoura" emoji="✌️"/>),
+    wins: ['paper', 'lizard']
+  },
+  lizard: {
+    displayName: 'Lagarto', 
+    emoji: (<Emoji ariaLabel="lagarto" emoji="🦎"/>),
+    wins: ['spock', 'paper']
+  },
+  spock: {
+    displayName: 'Spock', 
+    emoji: (<Emoji ariaLabel="spock" emoji="🖖"/>),
+    wins: ['scissors', 'rock']
+  }
 }
 
 function getComputerChoice() {
@@ -44,12 +63,16 @@ function App() {
     <StyledApp>
       <Global />
       <Buttons playGame={ playGame } />
-      {TYPE_OPTIONS[playerChoice || 'default'][1]}
-      {TYPE_OPTIONS[playerChoice || 'default'][0]}
+      {playerChoice && (
+        <React.Fragment>
+          {OPTIONS[playerChoice].emoji}
+          {OPTIONS[playerChoice].displayName }
+        </React.Fragment>
+      )}
       {computerChoice && (
         <React.Fragment>
-          {TYPE_OPTIONS[computerChoice][1]}
-          {TYPE_OPTIONS[computerChoice][0]}
+          {OPTIONS[computerChoice].emoji}
+          {OPTIONS[computerChoice].displayName }
         </React.Fragment>
       )}
     </StyledApp>
