@@ -38,14 +38,16 @@ function getComputerChoice() {
 }
 
 function getResult(playerChoice, computerChoice, setResult) {
-  const rock_wins = ['lizard', 'scissors'];
-  const papers_wins = ['rock', 'spock'];
-  const scissors_wins = ['paper', 'lizard'];
-  const lizard_wins = ['spock', 'paper'];
-  const spock_wins = ['tesoura', 'pedra'];
-
-  if(playerChoice === computerChoice) {
-
+  if(OPTIONS[playerChoice] === undefined) {
+    setResult('Escolha uma das opções acima');
+  } else if(playerChoice === computerChoice) {
+    setResult("Empate --'");
+  } else {
+    if(OPTIONS[playerChoice].wins.indexOf(computerChoice) > -1) {
+      setResult("Você ganhou! \\o/");
+    } else {
+      setResult("Computador ganhou... :(")
+    }
   }
 }
 
@@ -57,6 +59,7 @@ function App() {
   const playGame = (playerChoice) => {
     setPlayerChoice(playerChoice);
     setComputerChoice(getComputerChoice());
+    getResult(playerChoice, computerChoice, setResult);
   }
 
   return (
@@ -75,6 +78,7 @@ function App() {
           {OPTIONS[computerChoice].displayName }
         </React.Fragment>
       )}
+      <p>{ result }</p>
     </StyledApp>
   );
 }
