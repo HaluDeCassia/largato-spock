@@ -1,6 +1,8 @@
 import styled, { createGlobalStyle } from "styled-components";
 import { dangerColor, darkColor, lightColor } from "./colors";
 
+import Comfortaa from '../fonts/Comfortaa-VariableFont_wght.ttf';
+
 import "font-awesome/css/font-awesome.css";
 
 export const transitionAllEase = `transition: all 0.2s ease-out;`;
@@ -42,14 +44,19 @@ export const StyledButton = styled.button`
 `;
 
 export const Global = createGlobalStyle`
-html, body {
-  margin: 0;
-  height: 100vh;
-  font-size: 16px;
-  color: ${darkColor};
-  background-color: ${lightColor};
-  text-rendering: optimizeLegibility !important;
-  -webkit-font-smoothing: antialiased !important;
-  font-family: "Comfortaa", "san-serif";
-}
+  @font-face {
+    font-family: 'Comfortaa';
+    src: url(${Comfortaa});
+  }
+
+  html, body {
+    margin: 0;
+    height: 100vh;
+    font-size: 16px;
+    color: ${darkColor};
+    background-color: ${lightColor};
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    font-family: 'Comfortaa', cursive;
+  }
 `;
