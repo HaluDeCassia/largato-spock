@@ -70,20 +70,10 @@ export default function App() {
       <Global />
       <Buttons playGame={ playGame } />
 
-      {playerChoice && (
-        <React.Fragment>
-          {OPTIONS[playerChoice].emoji}
-          {OPTIONS[playerChoice].displayName }
-        </React.Fragment>
-      )}
+      { playerChoice && <p>Você: { OPTIONS[playerChoice].displayName }</p> }
 
-      {computerChoice && (
-        <React.Fragment>
-          {OPTIONS[computerChoice].emoji}
-          {OPTIONS[computerChoice].displayName }
-        </React.Fragment>
-      )}
-      
+      { computerChoice && <p>Computador: { OPTIONS[computerChoice].displayName }</p> }
+
       <p>{ result }</p>
     </StyledApp>
   );
