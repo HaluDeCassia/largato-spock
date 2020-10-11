@@ -3,23 +3,23 @@ import PropTypes from 'prop-types';
 
 import Grid from '../Grid';
 
-import { Col, Name, Points, Title } from './styles';
+import { Col, Name, Points, StyledScoreboard, Title } from './styles';
 
 export default function Scoreboard({ points }) {
   return (
-    <React.Fragment>
+    <StyledScoreboard>
       <Title>Placar</Title>
       <Grid>
         <Col className="left-col"> 
-          <Name>Você</Name>
+          <Name><i className="fas fa-smile"></i></Name>
           <Points>{points.player}</Points>
         </Col>
         <Col>
-          <Name>Computador</Name>
+          <Name><i className="fas fa-robot"></i></Name>
           <Points>{points.computer}</Points>
         </Col>
       </Grid>
-    </React.Fragment>
+    </StyledScoreboard>
   );
 }
 

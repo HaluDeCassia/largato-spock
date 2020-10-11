@@ -1,21 +1,33 @@
 import styled from "styled-components";
 
-export const Col = styled.div`
-  min-width: 6rem;
+import { darkColor, lightColor } from "../../styles/colors";
+
+export const StyledScoreboard = styled.div`
+  margin: 1rem;
+  padding: 0.2rem;
   text-align: center;
-  margin: 0 0.5rem 1rem;
+  color: ${lightColor};
+  background-color: #5e4343e8;
+  box-shadow: 0 0 4px ${darkColor};
+`;
+
+export const Col = styled.div`
+  min-width: 8rem;
+  margin-bottom: 1rem;
 
   &.left-col {
-    border-right: 1px solid #eee;
+    border-right: 1px solid #7967678c;
   }
 `;
 
 export const Name = styled.p`
-  margin-bottom: 0.2rem;
+  font-size: 2rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.8rem;
 `;
 
 export const Points = styled.p`
-  margin: 0;
+  margin: 0.5rem 0;
   font-size: 1.6rem;
 `;
 
