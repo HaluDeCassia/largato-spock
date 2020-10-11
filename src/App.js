@@ -3,11 +3,11 @@ import React from 'react';
 import Buttons from './components/Buttons';
 import Scoreboard from './components/Scoreboard'; 
 import Result from './components/Result'; 
-import Rules from './components/Rules'; 
+import Rules from './components/Rules';
 
 import { OPTIONS } from './constants';
 
-import { StyledApp, Global } from './styles/global'; 
+import { StyledApp, StyledButton, Global } from './styles/global'; 
 
 function getComputerChoice() {
   const computerChoices = ['rock','paper','scissors', 'lizard', 'spock'];
@@ -74,7 +74,7 @@ export default function App() {
       />
       <Scoreboard points={points} />
       
-      <button onClick={() => setPoints({player: 0, computer: 0})} aria-label="resetar pontos">Reiniciar</button>
+      <StyledButton onClick={() => setPoints({player: 0, computer: 0})} aria-label="resetar pontos"><i className="fas fa-trash icon-button"></i> Limpar placar</StyledButton>
     </StyledApp>
   );
 }
