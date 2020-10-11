@@ -2,14 +2,14 @@ import React from 'react';
 
 import { OPTIONS } from '../../constants';
 
-import { StyledResult, Message } from './styles.js';
+import { Choice, StyledResult, Message } from './styles.js';
 
 export default function Result({ playerChoice, computerChoice, result}) {
   return (
     <StyledResult>
-      { playerChoice && <p>Você: { OPTIONS[playerChoice].displayName }</p> }
-      { computerChoice && <p>Computador: { OPTIONS[computerChoice].displayName }</p> }
-      <Message className={ result.status }>{ result.message }</Message>
+      { playerChoice && <Choice isPlayer>Você: { OPTIONS[playerChoice].displayName }</Choice> }
+      { computerChoice && <Choice>Computador: { OPTIONS[computerChoice].displayName }</Choice> }
+      <Message status={ result.status }>{ result.message }</Message>
     </StyledResult>
   );
 }
