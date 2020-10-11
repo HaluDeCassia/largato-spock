@@ -2,6 +2,7 @@ import React from 'react';
 
 import Buttons from './components/Buttons'; 
 import Emoji from './components/Emoji'; 
+import Modal from './components/Modal'; 
 
 import { StyledApp, Global } from './styles/global'; 
 
@@ -68,6 +69,10 @@ export default function App() {
   return (
     <StyledApp>
       <Global />
+      <p>
+        Pedra-papel-tesoura-lagarto-Spock é uma expansão do clássico método de seleção em jogo de pedra-papel-tesoura. O jogo foi inventado por Sam Kass e Karen Bryla, como "Rock Paper Scissors Lizard Spock". Para entender as regras, 
+        <button onClick={() => toggleModal(!modal)} aria-label="sair da fila">clique aqui</button>
+      </p>
       <Buttons playGame={ playGame } />
 
       { playerChoice && <p>Você: { OPTIONS[playerChoice].displayName }</p> }
@@ -75,6 +80,8 @@ export default function App() {
       { computerChoice && <p>Computador: { OPTIONS[computerChoice].displayName }</p> }
 
       <p>{ result }</p>
+
+      {modal && <Modal isOpen={modal} onClose={toggleModal} /> }
     </StyledApp>
   );
 }
