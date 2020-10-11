@@ -61,8 +61,9 @@ export default function App() {
   const playGame = (playerChoice) => {
     setPlayerChoice(playerChoice);
     setComputerChoice(getComputerChoice());
-    getResult(playerChoice, computerChoice, setResult);
   }
+
+  React.useEffect(() => getResult(playerChoice, computerChoice, setResult), [playerChoice, computerChoice])
 
   return (
     <StyledApp>
