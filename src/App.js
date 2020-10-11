@@ -1,8 +1,8 @@
 import React from 'react';
 
 import Buttons from './components/Buttons'; 
-import Grid from './components/Grid'; 
 import Modal from './components/Modal'; 
+import Scoreboard from './components/Scoreboard'; 
 
 import { OPTIONS } from './constants';
 
@@ -67,14 +67,8 @@ export default function App() {
 
       {modal && <Modal isOpen={modal} onClose={toggleModal} /> }
 
-      <Grid>
-        <p>
-          {points.player}
-        </p>
-        <p>
-          {points.computer}
-        </p>
-      </Grid>
+      <Scoreboard points={points} />
+      
       <button onClick={() => setPoints({player: 0, computer: 0})} aria-label="resetar pontos">Reiniciar</button>
     </StyledApp>
   );
