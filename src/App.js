@@ -52,8 +52,9 @@ function getResult(playerChoice, computerChoice, setResult) {
   }
 }
 
-function App() {
-  const [playerChoice, setPlayerChoice] = React.useState(null);
+export default function App() {
+  const [modal, toggleModal] = React.useState(false);
+  const [playerChoice, setPlayerChoice] = React.useState('');
   const [computerChoice, setComputerChoice] = React.useState('');
   const [result, setResult] = React.useState('');
 
@@ -86,5 +87,3 @@ function App() {
     </StyledApp>
   );
 }
-
-export default App;
