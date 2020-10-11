@@ -15,7 +15,7 @@ export const Points = styled.p`
   font-size: 1.6rem;
 `;
 
-export const Result = styled.p`
+export const Message = styled.p`
   font-size: 1.2rem;
   font-weight: bold;
 
