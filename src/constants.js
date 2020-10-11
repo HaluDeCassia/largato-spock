@@ -1,30 +1,22 @@
-import React from 'react';
-import Emoji from './components/Emoji'; 
-
 export const OPTIONS = {
   rock: {
-    displayName: 'Pedra', 
-    emoji: (<Emoji ariaLabel="pedra" emoji="✊"/>),
+    displayName: 'Pedra',
     wins: ['lizard', 'scissors']
   },
   paper: {
     displayName: 'Papel', 
-    emoji: (<Emoji ariaLabel="papel" emoji="✋"/>),
     wins: ['rock', 'spock']
   },
   scissors:{
-    displayName: 'Tesoura', 
-    emoji: (<Emoji ariaLabel="tesoura" emoji="✌️"/>),
+    displayName: 'Tesoura',
     wins: ['paper', 'lizard']
   },
   lizard: {
-    displayName: 'Lagarto', 
-    emoji: (<Emoji ariaLabel="lagarto" emoji="🦎"/>),
+    displayName: 'Lagarto',
     wins: ['spock', 'paper']
   },
   spock: {
-    displayName: 'Spock', 
-    emoji: (<Emoji ariaLabel="spock" emoji="🖖"/>),
+    displayName: 'Spock',
     wins: ['scissors', 'rock']
   }
 }
