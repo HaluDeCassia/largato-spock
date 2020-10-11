@@ -1,16 +1,10 @@
 import React from 'react';
-import styled from "styled-components";
+import { StyledEmoji, StyledIcon } from './styles.js';
 
-export const StyledEmoji = styled.span`
-  border: none;
-  font-size: 4rem;
-  background: none;
-`;
-
-export default function Emoji({ emoji, ariaLabel }) {
+export default function Emoji({ gradient, emoji, size, ariaLabel }) {
   return (
-    <StyledEmoji>
-      <span role="img" aria-label={ariaLabel}>{ emoji }</span>
+    <StyledEmoji size={size}>
+      <StyledIcon gradient aria-label={ariaLabel} className={`far fa-${emoji}`}></StyledIcon>
     </StyledEmoji>
   );
 }
