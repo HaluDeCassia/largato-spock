@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Buttons from './components/Buttons'; 
-import Modal from './components/Modal'; 
+import Buttons from './components/Buttons';
 import Scoreboard from './components/Scoreboard'; 
 import Result from './components/Result'; 
+import Rules from './components/Rules'; 
 
 import { OPTIONS } from './constants';
 
@@ -50,7 +50,6 @@ function getResult(playerChoice, computerChoice, setResult, setPoints) {
 }
 
 export default function App() {
-  const [modal, toggleModal] = React.useState(false);
   const [playerChoice, setPlayerChoice] = React.useState('');
   const [computerChoice, setComputerChoice] = React.useState('');
   const [result, setResult] = React.useState({ message: '', status: '' });
@@ -66,21 +65,13 @@ export default function App() {
   return (
     <StyledApp>
       <Global />
-      <p>
-        Pedra-papel-tesoura-lagarto-Spock é uma expansão do clássico método de seleção em jogo de pedra-papel-tesoura. O jogo foi inventado por Sam Kass e Karen Bryla, como "Rock Paper Scissors Lizard Spock". Para entender as regras, 
-        <button onClick={() => toggleModal(!modal)} aria-label="ver regras">clique aqui</button>
-      </p>
-
+      <Rules />
       <Buttons playGame={ playGame } />
-
-      <Result 
+      <Result
         result={ result }
         playerChoice={ playerChoice } 
         computerChoice={ computerChoice } 
       />
-
-      {modal && <Modal isOpen={modal} onClose={toggleModal} /> }
-
       <Scoreboard points={points} />
       
       <button onClick={() => setPoints({player: 0, computer: 0})} aria-label="resetar pontos">Reiniciar</button>
