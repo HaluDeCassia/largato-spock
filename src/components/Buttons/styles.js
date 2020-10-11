@@ -5,9 +5,3 @@ export const Button = styled.button`
   font-size: 4rem;
   background: none;
 `;
-
-export const Grid = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
