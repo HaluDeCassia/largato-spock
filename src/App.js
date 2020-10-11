@@ -1,38 +1,11 @@
 import React from 'react';
 
 import Buttons from './components/Buttons'; 
-import Emoji from './components/Emoji'; 
 import Modal from './components/Modal'; 
 
-import { StyledApp, Global } from './styles/global'; 
+import { OPTIONS } from './constants';
 
-const OPTIONS = {
-  rock: {
-    displayName: 'Pedra', 
-    emoji: (<Emoji ariaLabel="pedra" emoji="✊"/>),
-    wins: ['lizard', 'scissors']
-  },
-  paper: {
-    displayName: 'Papel', 
-    emoji: (<Emoji ariaLabel="papel" emoji="✋"/>),
-    wins: ['rock', 'spock']
-  },
-  scissors:{
-    displayName: 'Tesoura', 
-    emoji: (<Emoji ariaLabel="tesoura" emoji="✌️"/>),
-    wins: ['paper', 'lizard']
-  },
-  lizard: {
-    displayName: 'Lagarto', 
-    emoji: (<Emoji ariaLabel="lagarto" emoji="🦎"/>),
-    wins: ['spock', 'paper']
-  },
-  spock: {
-    displayName: 'Spock', 
-    emoji: (<Emoji ariaLabel="spock" emoji="🖖"/>),
-    wins: ['scissors', 'rock']
-  }
-}
+import { StyledApp, Global } from './styles/global'; 
 
 function getComputerChoice() {
   const computerChoice = ['rock','paper','scissors', 'lizard', 'spock'];
