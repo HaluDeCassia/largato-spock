@@ -27,5 +27,5 @@ export default function Scoreboard({ points }) {
 }
 
 Scoreboard.propTypes = {
-  points: PropTypes.object.isRequired
+  points: PropTypes.objectOf(PropTypes.number).isRequired
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { OPTIONS } from '../../constants';
 
@@ -13,3 +14,14 @@ export default function Result({ playerChoice, computerChoice, result}) {
     </StyledResult>
   );
 }
+
+const options = ['rock', 'paper', 'scissors', 'lizard', 'spock', ''];
+
+Result.propTypes = {
+  playerChoice: PropTypes.oneOf(options).isRequired,
+  computerChoice: PropTypes.oneOf(options).isRequired,
+  result: PropTypes.exact({
+    status: PropTypes.oneOf(['victory', 'defeat', 'waiting', '']),
+    message: PropTypes.string
+  }).isRequired
+};

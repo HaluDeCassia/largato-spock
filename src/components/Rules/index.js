@@ -4,7 +4,7 @@ import Modal from '../Modal';
 
 import { Button, StyledRules } from './styles.js';
 
-export default function App({ playerChoice, computerChoice, result}) {
+export default function Rules({ playerChoice, computerChoice, result}) {
   const [modal, toggleModal] = React.useState(false);
 
   return (
