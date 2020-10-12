@@ -58,5 +58,9 @@ export const Global = createGlobalStyle`
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
     font-family: 'Comfortaa', cursive;
+
+    button:focus {
+      outline: 0;
+    }
   }
 `;

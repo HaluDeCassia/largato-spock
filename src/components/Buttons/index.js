@@ -11,7 +11,7 @@ const options = [
     name: 'rock',
     label: 'pedra',
     emoji: 'hand-rock',
-    color: '#CE5788'
+    color: '#afc8d3'
   }, {
     name: 'paper',
     label: 'papel',
@@ -21,17 +21,17 @@ const options = [
     name: 'scissors',
     label: 'tesoura',
     emoji: 'hand-scissors',
-    color: '#CE5788'
+    color: '#8982ec'
   }, {
     name: 'lizard',
     label: 'lagarto',
     emoji: 'hand-lizard',
-    color: '#CE5788'
+    color: '#1de464'
   }, {
     name: 'spock',
     label: 'spock',
     emoji: 'hand-spock',
-    color: '#CE5788'
+    color: '#d487a7'
   }
 ];
 
@@ -39,7 +39,7 @@ export default function Buttons({ playGame }) {
   return (
     <Grid>
       {options.map((option, index) => (
-        <Button onClick={() => playGame(option.name)}>
+        <Button key={`button_${index}`} onClick={() => playGame(option.name)}>
           <Emoji gradient size={4} color={option.color} ariaLabel={option.label} emoji={option.emoji}/>
         </Button>
       ))}
