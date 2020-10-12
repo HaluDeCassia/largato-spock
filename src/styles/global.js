@@ -63,5 +63,17 @@ export const Global = createGlobalStyle`
     button:focus {
       outline: 0;
     }
+
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+    }
+
+    @media screen and (max-width: 480px) {
+      font-size: 12px;
+    }
+
+    @media screen and (max-width: 320px) {
+      font-size: 10px;
+    }
   }
 `;
