@@ -12,7 +12,7 @@ import { dangerColor } from "./styles/colors";
 
 import { Global, IconButton, StyledApp, StyledButton  } from './styles/global'; 
 
-function getComputerChoice() {
+function getComputerChoice() { // returns one of choices randomly
   const computerChoices = ['rock','paper','scissors', 'lizard', 'spock'];
   return computerChoices[Math.floor(Math.random()*computerChoices.length)];
 }
@@ -29,6 +29,8 @@ function getResult(playerChoice, computerChoice, setResult, setPoints) {
       status: ''
     });
   } else {
+    // if you find the bot option within the winning options of the player’s choice, it means that the player won
+    
     if(OPTIONS[playerChoice].wins.indexOf(computerChoice) > -1) {
       setResult({
         message: "Você ganhou! \\o/",
@@ -36,7 +38,7 @@ function getResult(playerChoice, computerChoice, setResult, setPoints) {
       });
 
       setPoints(previousPoints => ({...previousPoints,
-        player: previousPoints.player + 1
+        player: previousPoints.player + 1 // counts player score
       }));
 
     } else {
@@ -46,7 +48,7 @@ function getResult(playerChoice, computerChoice, setResult, setPoints) {
       });
 
       setPoints(previousPoints => ({...previousPoints,
-        computer: previousPoints.computer + 1
+        computer: previousPoints.computer + 1 // counts bot score
       }));
     }
   }

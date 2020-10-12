@@ -3,13 +3,13 @@ import ReactDom from "react-dom";
 
 import {  StyledModal } from "./styles";
 
-const modalRoot = document.getElementById("modal-root");
+const modalRoot = document.getElementById("modal-root"); // get div in html public
 
 export default function Modal (props) {
-  const background = React.createRef();
+  const background = React.createRef(); // create reference to component
   const [fadeType, setFadeType] = React.useState('');
 
-  React.useEffect((prevProps) => {
+  React.useEffect((prevProps) => { // sets fade in whenever isOpen is true
     setTimeout(() => setFadeType("in"), 0);
 
     if (!props.isOpen && prevProps.isOpen) {
@@ -18,19 +18,19 @@ export default function Modal (props) {
   }, [props.isOpen]);
 
   function transitionEnd (event) {
-    if (event.propertyName !== "opacity" || fadeType === "in") return;
+    if (event.propertyName !== "opacity" || fadeType === "in") return; // if not opacity, done
 
-    if (fadeType === "out") {
+    if (fadeType === "out") { // if fade out, calls onClose function declared in App
       props.onClose();
     }
   };
 
-  function handleClick (event) {
+  function handleClick (event) { // sets fade out when clicked outside the popup window
     event.preventDefault();
     setFadeType("out");
   };
 
-  return ReactDom.createPortal(
+  return ReactDom.createPortal( // makes a portal to render component outside DOM hierarchy
     <StyledModal
       id='popup-rules'
       role="dialog"

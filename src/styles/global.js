@@ -23,7 +23,6 @@ export const StyledButton = styled.button`
   border-radius: 20px;
   color: ${lightColor};
   padding: 0.5rem 1rem 0.5rem 3rem;
-  background-color: ${dangerColor};
   background-image: linear-gradient(to bottom right, #d50000, ${dangerColor});
   box-shadow: -2px 2px 6px ${darkColor};
 
@@ -56,8 +55,8 @@ export const Global = createGlobalStyle`
     font-size: 16px;
     color: ${darkColor};
     background-color: ${lightColor};
-    text-rendering: optimizeLegibility !important;
-    -webkit-font-smoothing: antialiased !important;
+    text-rendering: optimizeLegibility !important; /* optimizes text rendering */
+    -webkit-font-smoothing: antialiased !important; /* optimizes text rendering */
     font-family: 'Comfortaa', cursive;
 
     button:focus {

@@ -27,6 +27,7 @@ test('renders Grid component', () => {
   render(<Grid>testing</Grid>);
 });
 
+// TODO: find a way to test Modal component. Render not working because this component is a reference
 // test('renders Modal component', () => {
 //   const div = document.createElement('div'); // create the div here
 //   render(<Modal/>, div);
