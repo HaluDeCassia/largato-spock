@@ -1,5 +1,3 @@
-import React from 'react';
-
 import styled, { css } from "styled-components";
 
 import { darkColor } from '../../styles/colors';
@@ -18,13 +16,8 @@ const GradientIcon = css`
   }
 `;
 
-export const StyledEmoji = styled.span`
-  border: none;
-  background: none;
-  font-size: ${props => props.size}rem;
-`;
-
 export const StyledIcon = styled.i`
+  font-size: ${props => props.size}rem;
   color: ${props => props.color || darkColor};
   
   ${props => props.gradient ? GradientIcon : ''}
