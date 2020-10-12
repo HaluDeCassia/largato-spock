@@ -7,8 +7,8 @@ export const StyledScoreboard = styled.div`
   padding: 0.2rem;
   text-align: center;
   color: ${lightColor};
-  background-color: #5e4343e8;
   box-shadow: 0 0 4px ${darkColor};
+  background-image: linear-gradient(to bottom right, #795757e8, ${darkColor});
 `;
 
 export const Col = styled.div`
