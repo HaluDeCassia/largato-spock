@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/lizard-spock/precache-manifest.f79cd6362ac80989794a152f76c4fff1.js"
+  "/lizard-spock/precache-manifest.da5b4d9cd4353fd2f205bbe58fcf8b9d.js"
 );
 
 self.addEventListener('message', (event) => {

@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/lizard-spock/static/js/main.c50850be.chunk.js",
-    "main.js.map": "/lizard-spock/static/js/main.c50850be.chunk.js.map",
+    "main.js": "/lizard-spock/static/js/main.5744455c.chunk.js",
+    "main.js.map": "/lizard-spock/static/js/main.5744455c.chunk.js.map",
     "runtime-main.js": "/lizard-spock/static/js/runtime-main.c9e50a9b.js",
     "runtime-main.js.map": "/lizard-spock/static/js/runtime-main.c9e50a9b.js.map",
     "static/css/2.b3bc2287.chunk.css": "/lizard-spock/static/css/2.b3bc2287.chunk.css",
     "static/js/2.7fec5c17.chunk.js": "/lizard-spock/static/js/2.7fec5c17.chunk.js",
     "static/js/2.7fec5c17.chunk.js.map": "/lizard-spock/static/js/2.7fec5c17.chunk.js.map",
     "index.html": "/lizard-spock/index.html",
-    "precache-manifest.f79cd6362ac80989794a152f76c4fff1.js": "/lizard-spock/precache-manifest.f79cd6362ac80989794a152f76c4fff1.js",
+    "precache-manifest.da5b4d9cd4353fd2f205bbe58fcf8b9d.js": "/lizard-spock/precache-manifest.da5b4d9cd4353fd2f205bbe58fcf8b9d.js",
     "service-worker.js": "/lizard-spock/service-worker.js",
     "static/css/2.b3bc2287.chunk.css.map": "/lizard-spock/static/css/2.b3bc2287.chunk.css.map",
     "static/js/2.7fec5c17.chunk.js.LICENSE.txt": "/lizard-spock/static/js/2.7fec5c17.chunk.js.LICENSE.txt",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.c9e50a9b.js",
     "static/css/2.b3bc2287.chunk.css",
     "static/js/2.7fec5c17.chunk.js",
-    "static/js/main.c50850be.chunk.js"
+    "static/js/main.5744455c.chunk.js"
   ]
 }

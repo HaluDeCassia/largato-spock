@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "11d7a3e7a171ea2e7e3df3d757935fe9",
+    "revision": "65aaf3cc45357ae6413b2e3e79b8c9a0",
     "url": "/lizard-spock/index.html"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/lizard-spock/static/js/2.7fec5c17.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4c9ae1228ec90ea2ebad",
-    "url": "/lizard-spock/static/js/main.c50850be.chunk.js"
+    "revision": "07d89048fbe6cde6fc71",
+    "url": "/lizard-spock/static/js/main.5744455c.chunk.js"
   },
   {
     "revision": "46e38739475c9f3119be",
