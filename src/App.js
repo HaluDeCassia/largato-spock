@@ -83,7 +83,7 @@ export default function App() {
         <IconButton>
           <Emoji solid gradient size={1} color={dangerColor} ariaLabel="ícone de lixeira" emoji="trash"/>
         </IconButton>
-        Limpar placa
+        Limpar placar
       </StyledButton>
     </StyledApp>
   );
