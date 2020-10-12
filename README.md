@@ -28,3 +28,9 @@ It correctly bundles React in production mode and optimizes the build for the be
 ### `yarn start-sw` or `npm run start-sw`
 
 Runs the app in the production mode in your localhost in port 8080, using `build` folder created with `yarn build` script
+
+
+## Future implementations
+- unit testing improvements
+- publish project on some server
+- improve accessibility
