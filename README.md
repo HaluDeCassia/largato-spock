@@ -1,8 +1,11 @@
 # Rock, paper, scissors, lizard, Spock
+### :fist: :hand: :v: :lizard: 🖖
 
 This is an online game where the player will play against a computer, which generates its choices randomly as the player chooses his own among the available options. More instructions and game rules are available into the game.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Go to [https://haludecassia.github.io/lizard-spock/](https://haludecassia.github.io/lizard-spock/) to play! :tada:
 
 ## Install, run, build and test app
 
@@ -32,5 +35,5 @@ Runs the app in the production mode in your localhost in port 8080, using `build
 
 ## Future implementations
 - unit testing improvements
-- publish project on some server
+- ~publish project~
 - improve accessibility
