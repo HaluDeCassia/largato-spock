@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { lightColor } from "../../styles/colors";
+
+import Emoji from '../Emoji';
 import Grid from '../Grid';
 
 import { Col, Name, Points, StyledScoreboard, Title } from './styles';
@@ -11,11 +14,11 @@ export default function Scoreboard({ points }) {
       <Title>Placar</Title>
       <Grid>
         <Col className="left-col"> 
-          <Name><i className="fas fa-smile"></i></Name>
+          <Name><Emoji solid size={2} color={lightColor} ariaLabel="emoji de sorriso" emoji="smile"/></Name>
           <Points>{points.player}</Points>
         </Col>
         <Col>
-          <Name><i className="fas fa-robot"></i></Name>
+          <Name><Emoji solid size={2} color={lightColor} ariaLabel="emoji de robô" emoji="robot"/></Name>
           <Points>{points.computer}</Points>
         </Col>
       </Grid>

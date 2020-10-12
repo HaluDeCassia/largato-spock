@@ -24,23 +24,24 @@ export const StyledButton = styled.button`
   color: ${lightColor};
   padding: 0.5rem 1rem 0.5rem 3rem;
   background-color: ${dangerColor};
-  box-shadow: 0 0 6px ${darkColor};
+  background-image: linear-gradient(to bottom right, #d50000, ${dangerColor});
+  box-shadow: -2px 2px 6px ${darkColor};
 
   ${ transitionAllEase }
 
   &:hover {
     ${ transitionAllEase }
-    box-shadow: 0 0 14px ${darkColor};
+    box-shadow: -2px 2px 10px ${darkColor};
+    background-image: linear-gradient(to bottom right, ${dangerColor}, #de3535, #d50000);
   }
+`;
 
-  .icon-button {
-    position: absolute;
-    border-radius: 100%;
-    color: ${dangerColor};
-    padding: 0.7rem 0.8rem;
-    margin: -0.6rem -3.2rem;
-    background-color: ${lightColor};
-  }
+export const IconButton = styled.i`
+  position: absolute;
+  border-radius: 100%;
+  padding: 0.7rem 0.8rem;
+  margin: -0.6rem -3.2rem;
+  background-color: ${lightColor};
 `;
 
 export const Global = createGlobalStyle`

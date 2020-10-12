@@ -1,13 +1,16 @@
 import React from 'react';
 
 import Buttons from './components/Buttons';
+import Emoji from './components/Emoji';
 import Scoreboard from './components/Scoreboard'; 
 import Result from './components/Result'; 
 import Rules from './components/Rules';
 
 import { OPTIONS } from './constants';
 
-import { StyledApp, StyledButton, Global } from './styles/global'; 
+import { dangerColor } from "./styles/colors";
+
+import { Global, IconButton, StyledApp, StyledButton  } from './styles/global'; 
 
 function getComputerChoice() {
   const computerChoices = ['rock','paper','scissors', 'lizard', 'spock'];
@@ -74,7 +77,12 @@ export default function App() {
       />
       <Scoreboard points={points} />
       
-      <StyledButton onClick={() => setPoints({player: 0, computer: 0})} aria-label="resetar pontos"><i className="fas fa-trash icon-button"></i> Limpar placar</StyledButton>
+      <StyledButton onClick={() => setPoints({player: 0, computer: 0})} aria-label="resetar pontos">
+        <IconButton>
+          <Emoji solid gradient size={1} color={dangerColor} ariaLabel="ícone de lixeira" emoji="trash"/>
+        </IconButton>
+        Limpar placa
+      </StyledButton>
     </StyledApp>
   );
 }
